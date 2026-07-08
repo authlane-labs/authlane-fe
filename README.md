@@ -1,5 +1,10 @@
 # AuthLane FE
 
+![React](https://img.shields.io/badge/React-18-61dafb?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite)
+![Auth](https://img.shields.io/badge/Auth-refresh_token-7c3aed)
+
 신규 React 인증 화면과 레거시 로그인 폼이 같은 인증 API를 사용하도록 구성한 프론트엔드입니다.
 
 ## 기능
