@@ -5,15 +5,16 @@ import { useDashboard } from "./hooks";
 
 const fallback = {
   metrics: [
-    { key: "signin_success_rate", label: "signin success rate", value: 184, unit: "ms", target: 220 },
-    { key: "refresh_retry_rate", label: "refresh retry rate", value: 92, unit: "%", target: 90 },
-    { key: "phone_token_reuse_blocks", label: "phone token reuse blocks", value: 37, unit: "events", target: 30 },
+    { key: "signin_success", label: "signin success", value: 96, unit: "%", target: 95 },
+    { key: "refresh_retries", label: "refresh retries", value: 14, unit: "req", target: 20 },
+    { key: "phone_blocks", label: "phone token blocks", value: 7, unit: "cases", target: 5 }
   ],
   events: [
-    { id: "evt-1", title: "phone verification", status: "requested", severity: "high", updatedAt: "2026-07-08" },
-    { id: "evt-2", title: "refresh token hardening", status: "approved", severity: "medium", updatedAt: "2026-07-08" },
+    { id: "auth-731", title: "Expired refresh token retry", status: "blocked", severity: "high", updatedAt: "2026-07-08" },
+    { id: "auth-644", title: "Phone verification resend", status: "verified", severity: "medium", updatedAt: "2026-07-08" },
+    { id: "auth-602", title: "Legacy form cookie check", status: "synced", severity: "low", updatedAt: "2026-07-07" }
   ],
-  trend: [{ day: "Mon", value: 12 }, { day: "Tue", value: 18 }, { day: "Wed", value: 33 }, { day: "Thu", value: 27 }, { day: "Fri", value: 41 }],
+  trend: [{ day: "Mon", value: 91 }, { day: "Tue", value: 94 }, { day: "Wed", value: 92 }, { day: "Thu", value: 96 }, { day: "Fri", value: 97 }],
 } as const;
 
 export const Dashboard = () => {
